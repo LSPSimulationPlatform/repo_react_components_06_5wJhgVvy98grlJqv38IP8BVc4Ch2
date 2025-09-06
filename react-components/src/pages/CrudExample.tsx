@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import   { Row, Col,} from 'antd';
+import { Row, Col, message } from 'antd';
 // import { ColumnsType } from 'antd/es/table';
 import useCrudExample from '../hooks/useCrudExample.tsx';
+import CreateUpdateCrudExample from '../components/CreateUpdateCrudExample.tsx';
 import TableCrudExample from '../components/TableCrudExample.tsx';
 
 /**
@@ -21,7 +22,8 @@ import TableCrudExample from '../components/TableCrudExample.tsx';
  */
 const CrudExample: React.FC = () => {
   // Call the custom hook to get category options, records, and table columns
-  const {categoryOptions, // Options for the category dropdown in the form
+  const {
+    categoryOptions, // Options for the category dropdown in the form
     records,         // Array of data records for the table
     columns          // Table column definitions
   } = useCrudExample();
@@ -33,7 +35,10 @@ const CrudExample: React.FC = () => {
       <Row gutter={[24, 24]}>
         {/* Form Section (left column on desktop) */}
         <Col xs={24} lg={8}>
-          
+          {/* Render the create/update form with category options */}
+          <CreateUpdateCrudExample
+            categoryOptions={categoryOptions}
+          />
         </Col>
 
         {/* Table Section (right column on desktop) */}
