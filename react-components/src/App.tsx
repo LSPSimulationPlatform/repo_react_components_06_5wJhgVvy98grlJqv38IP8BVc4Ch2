@@ -14,7 +14,6 @@ const App: React.FC = () => {
       }}
     >
       <div style={{ minHeight: '100vh', backgroundColor: '#f5f5f5' }}>
-        {/* Header */}
         <header style={{ 
           background: '#fff', 
           padding: '16px 24px', 
@@ -25,11 +24,9 @@ const App: React.FC = () => {
             React + TypeScript + Ant Design Component Library
           </h1>
           <p style={{ margin: '8px 0 0 0', color: '#666' }}>
-            Demonstrating reusable components, proper TypeScript usage, and CRUD operations
+            CRUD with 6 input fields: Name, Username, Email, Ölkə, Category, Description
           </p>
         </header>
-
-        {/* Main Content */}
         <main>
           <CrudExample />
         </main>

@@ -8,12 +8,14 @@ const CrudExample: React.FC = () => {
   const {
     formData,
     categoryOptions,
+    countryOptions,
     handleInputChange,
     handleSelectChange,
     handleSubmit,
     handleEdit,
     handleDelete,
     handleCancelEdit,
+    columns,
     records,
     editingRecord,
     isSubmitting,
@@ -26,6 +28,7 @@ const CrudExample: React.FC = () => {
           <CreateUpdateCrudExample
             formData={formData}
             categoryOptions={categoryOptions}
+            countryOptions={countryOptions}
             handleInputChange={handleInputChange}
             handleSelectChange={handleSelectChange}
             handleSubmit={handleSubmit}
@@ -34,9 +37,9 @@ const CrudExample: React.FC = () => {
             editingRecord={editingRecord}
           />
         </Col>
-
         <Col xs={24} lg={16}>
           <TableCrudExample
+            columns={columns}
             records={records}
             handleEdit={handleEdit}
             handleDelete={handleDelete}
